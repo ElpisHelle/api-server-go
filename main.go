@@ -55,6 +55,8 @@ func main() {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
 	<-sc
 
+	fmt.Println("This is adding code")
+
 	// Cleanly close down the Discord session.
 	dg.Close()
 }
